@@ -83,7 +83,7 @@ const CardPokemon = ({ item }: Props) => {
 
     return (
         <motion.div
-            className={`bg-white rounded-lg shadow-md p-4 flex flex-col items-center gap-2 bg-gradient-to-br ${getTypeBackground(item?.detail?.types?.[0]?.type?.name)} rounded-2xl shadow-xl border-[4px] border-gray-400 flex flex-col justify-between p-3 cursor-pointer`}
+            className={`bg-white rounded-lg shadow-md p-4 flex flex-col items-center gap-2 bg-gradient-to-br ${getTypeBackground(item?.detail?.types?.[0]?.type?.name)} rounded-2xl shadow-xl border-[4px] border-gray-300 flex flex-col justify-between p-3 cursor-pointer`}
             initial="initial"
             whileHover={!isMobile ? "hover" : {}}
             whileTap="tap"
