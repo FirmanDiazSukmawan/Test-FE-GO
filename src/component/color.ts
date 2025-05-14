@@ -1,0 +1,48 @@
+
+export const typeBackgrounds: Record<string, string> = {
+  normal: "from-neutral-400 via-neutral-200 to-white",
+  fighting: "from-red-800 via-red-400 to-white",
+  flying: "from-sky-400 via-blue-200 to-white",
+  poison: "from-purple-800 via-green-300 to-white",
+  ground: "from-amber-800 via-yellow-300 to-white",
+  rock: "from-yellow-900 via-yellow-400 to-white",
+  bug: "from-lime-600 via-green-300 to-white",
+  ghost: "from-indigo-900 via-purple-400 to-white",
+  steel: "from-gray-500 via-gray-200 to-white",
+  fire: "from-orange-600 via-orange-300 to-yellow-100",
+  water: "from-blue-700 via-blue-300 to-white",
+  grass: "from-green-700 via-green-300 to-white",
+  electric: "from-yellow-400 via-yellow-200 to-white",
+  psychic: "from-purple-700 via-pink-300 to-white",
+  ice: "from-blue-400 via-teal-200 to-white",
+  dragon: "from-indigo-700 via-yellow-200 to-white",
+  dark: "from-gray-800 via-gray-500 to-white",
+  fairy: "from-pink-400 via-pink-200 to-white",
+  stellar: "from-yellow-200 via-purple-300 to-white",
+  unknown: "from-gray-300 via-gray-100 to-white",
+};
+
+  
+
+export const typeTextColors: Record<string, string> = {
+  normal: "text-neutral-800",
+  fighting: "text-red-900",
+  flying: "text-sky-900",
+  poison: "text-purple-800",
+  ground: "text-amber-900",
+  rock: "text-yellow-900",
+  bug: "text-lime-900",
+  ghost: "text-indigo-800",
+  steel: "text-gray-800",
+  fire: "text-orange-900",
+  water: "text-blue-900",
+  grass: "text-green-900",
+  electric: "text-yellow-800",
+  psychic: "text-purple-900",
+  ice: "text-cyan-900",
+  dragon: "text-indigo-900",
+  dark: "text-gray-200",
+  fairy: "text-pink-800",
+  stellar: "text-purple-800",
+  unknown: "text-gray-500",
+};
