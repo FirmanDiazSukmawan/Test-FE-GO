@@ -94,7 +94,7 @@ export default function Home() {
         </div>
       </header>
 
-      <div className="grid grid-cols-1 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 gap-6 w-full">
+      <div className="grid grid-cols-1 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 lg:px-0 md:px-0 px-5 gap-6 w-full">
       {loading ? (
         
           Array.from({ length: 12 }).map((_, index) => (
