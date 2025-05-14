@@ -5,7 +5,7 @@ import PokemonLoader from "@/component/loading/BootsplashLoader/pokemonLoader";
 import CardPokemonSkeleton from "@/component/loading/cardSkeleton/cardPokemonSkeleton";
 import axiosInstance from "@/utils/axios/axios";
 import { NamedAPIResource, PokemonListItem } from "@/utils/type/pokemon";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 
 
@@ -17,6 +17,7 @@ export default function Home() {
   const limit = 12;
   const [loading,setLoading] = useState<boolean>(false)
   const [hasFetched, setHasFetched] = useState<boolean>(false);
+  const topRef = useRef<HTMLDivElement>(null);
 
   const getData = async (offsetValue:number) => {
     setLoading(true)
@@ -58,19 +59,31 @@ export default function Home() {
   };
 
   useEffect(() => {
-    getData(offset);
+    const fetchData = async () => {
+      await getData(offset);
+    
+      if (topRef.current) {
+        topRef.current.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    };
+    fetchData();
   }, [offset]);
   
 
   const handleNext = () => {
     if(!loading){
     setOffset(prev => prev + limit);
+   
   }
   };
 
   const handlePrev = () => {
     if (offset > 0 && !loading) {
       setOffset(prev => prev - limit);
+      
     }
   };
 
@@ -78,7 +91,7 @@ export default function Home() {
 
 
   return (
-    <div className="flex flex-col min-h-screen p-4 items-center justify-center bg-gray-950 ">
+    <div className="flex flex-col min-h-screen p-4 items-center justify-center bg-gray-950  " ref={topRef}>
        <header className="max-w-4xl mx-auto text-center mb-12">
         <div className="relative inline-block">
           <PokemonLoader />
